@@ -57,7 +57,7 @@ hbs.registerHelper('screamIt',(text)=>{
 
 app.get('/',(req, res)=>{
 
-    // res.send('Hello hello, ca can you hear me I camn be your china doll if you wanna see me fall.')
+    // res.send('Hello hello, ca can you hear me I can be your china doll if you wanna see me fall.')
     res.render('home.hbs',{
         pageTitle: 'home page',
         welcome: 'Welcome to our website.',
@@ -71,6 +71,14 @@ app.get('/about',(req,res)=>{
     // this renders the template.
     res.render('about.hbs',{
         pageTitle: 'About Page',
+        
+    });
+});
+
+app.get('/projects',(req,res)=>{
+    // this renders the template.
+    res.render('projects.hbs',{
+        pageTitle: 'Projects page',
         
     });
 });
