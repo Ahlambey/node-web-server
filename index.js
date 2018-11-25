@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 var app = express();
 var fs = require('fs');
+const port = process.env.PORT || 3000;
 
 
 
@@ -29,10 +30,10 @@ app.use((req,res,next)=>{
 });
 
 // a middleware to render the maintenance page
-app.use((req,res,next)=>{
-    res.render('maintenance.hbs');
+// app.use((req,res,next)=>{
+//     res.render('maintenance.hbs');
     
-});
+// });
 
 
 app.use(express.static(__dirname + '/public'));
@@ -84,4 +85,7 @@ app.get('/bad',(req,res)=>{
 
 // app.listen is gonna bind our app to a port on our machine.
 
-app.listen(3000);
+app.listen(port,()=>{
+    console.log(`server is up on port ${port}`)
+
+});
