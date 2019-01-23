@@ -2,10 +2,12 @@ const express = require('express');
 const hbs = require('hbs');
 var app = express();
 var fs = require('fs');
+
+
+
+
+
 const port = process.env.PORT || 3000;
-
-
-
 // defines the directory for the handelbars partials.
 hbs.registerPartials(__dirname +'/views/partials');
 // sts the view engine 
